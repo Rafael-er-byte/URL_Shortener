@@ -2,7 +2,7 @@
 
 This is a simple backend service that allows users to shorten URLs. This repo serves as a solution to [Roadmap.sh URL Shortening Service ](https://roadmap.sh/projects/url-shortening-service)
 
---
+---
 
 ## Features
 
@@ -12,14 +12,16 @@ This is a simple backend service that allows users to shorten URLs. This repo se
    - Basic error handling
    - Basic statics of the urls
    - Basic validation of urls and shortcodes
---
+---
+
 ## Tech Stack
    - Node js
    - Javascript
    - Mysql
    - html
    - validator
---
+---
+
 ## Installation
    1. Clon this repo
       ```bash
@@ -49,6 +51,7 @@ This is a simple backend service that allows users to shorten URLs. This repo se
          npx nodemon app.js
          ```
 ---
+
 ## End points
   1. *POST /sh.io/*
     Create a link with a custom short code or dont.
