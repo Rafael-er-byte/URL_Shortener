@@ -1,7 +1,7 @@
 const db = require('../config/dbConnetion')
 
 const createShortCode = async function(original, shortenedLink, expirationDate){
-    const sql = 'INSERT INTO link (original_link, shorted_link, expires_at) VALUES (?,?,?,?,?)'
+    const sql = 'INSERT INTO link (original_link, shorted_link, expires_at) VALUES (?,?,?)'
 
     const [result] = await db.execute(sql, [original, shortenedLink, expirationDate])
 
@@ -53,7 +53,7 @@ const modifyStatus = async function (shortCode, newStatus) {
 }
 
 const updateAccess = async function (shortCode, newTime, lastVisit, stats) {
-    const sql = 'UPDATE link SET expires_at = ?, last_visit = ? stats = ? WHERE shorted_link = ?'
+    const sql = 'UPDATE link SET expires_at = ?, last_visit = ?, stats = ? WHERE shorted_link = ?'
     const [result] = await db.execute(sql, [newTime, lastVisit, shortCode, stats])
     return result
 }
