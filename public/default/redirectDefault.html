@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+</head>
+<body>
+    <h2>Redirigiendo a <span id="target"></span>...</h2>
+    <h3> Si no hiciste click cierra esta ventana</h3>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search)
+        const target = urlParams.get('to')
+
+        if(target){
+            document.getElementById('target').textContent = target
+            setTimeout(() => {
+                window.location.href = target
+            }, 300);
+        }else{
+            document.body.innerHTML = '<h2>URL no Valida...</h2>'
+        }
+    </script>
+</body>
+</html>
