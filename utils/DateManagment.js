@@ -8,7 +8,7 @@ function expirationDate(){
     try{
         const date = new Date()
 
-        date.setDate(date.getDate() + 10)
+        date.setDate(date.getDate() + 60)
 
         const formattedDate = date.toISOString().slice(0, 19).replace('T', ' ')
 

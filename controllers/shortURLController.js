@@ -72,10 +72,9 @@ const retrieveURLController = async function (req, res, next) {
 const redirectController = async function (req, res, next) {
     try{
         const shortCode = req.params.shortcode
-        console.log(shortCode)
         const [id, target] = await redirectService(shortCode)
 
-        const redirectTo = `default/redirectDefault.html?to=${encodeURIComponent(target)}`
+        const redirectTo = `/default/redirectDefault.html?to=${encodeURIComponent(target)}`
 
         return res.redirect(301, redirectTo)
     }catch(error){next(error)}
