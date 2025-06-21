@@ -8,8 +8,6 @@ const {
     getStatsService
 } = require('../services/shortURLServices')
 
-const path = require('path')
-
 const createLinkControler = async function(req, res, next){
     try{
         const {url, shortCode = ''} = req.body
