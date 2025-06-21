@@ -10,7 +10,7 @@ const {
 } = require('../model/URLsModel')
 
 const {expirationDate , compareDates, dateNow}= require('../utils/DateManagment')
-const route = '/sh.io/'
+const route = 'https://' + process.env.HOST + ':' + process.env.PORT + '/sh.io/'
 
 const shortURLService = async function (url, shortCode) {
     try{
