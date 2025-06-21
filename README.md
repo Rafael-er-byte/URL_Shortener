@@ -3,19 +3,19 @@ This is a simple backend service that allows users to shorten URLs. This repo se
 --
 ## Featrures
 
--Shorten urls into shortcodes
--Shortcodes can be customizables
--Redirects to the original url from the short url
--Basic error handling
--Basic statics of the urls
--Basic validation of urls and shortcodes
+   -Shorten urls into shortcodes
+   -Shortcodes can be customizables
+   -Redirects to the original url from the short url
+   -Basic error handling
+   -Basic statics of the urls
+   -Basic validation of urls and shortcodes
 --
 ## Tech Stack
--Node js
--Javascript
--Mysql
--html
--validator
+   -Node js
+   -Javascript
+   -Mysql
+   -html
+   -validator
 --
 ## Installation
    1. Clon this repo
