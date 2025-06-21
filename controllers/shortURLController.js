@@ -72,7 +72,7 @@ const retrieveURLController = async function (req, res, next) {
 const redirectController = async function (req, res, next) {
     try{
         const shortCode = req.params.shortcode
-
+        console.log(shortCode)
         const [id, target] = await redirectService(shortCode)
 
         const redirectTo = `default/redirectDefault.html?to=${encodeURIComponent(target)}`
@@ -83,7 +83,7 @@ const redirectController = async function (req, res, next) {
 
 const getStatsController = async function (req, res, next){
     try{
-        const {shortCode} = req.body
+        const shortCode = req.params.shortCode
         if(!shortCode)throw new Error('NOT_ITEM_PROVIDED')
 
         const stats = await getStatsService(shortCode)

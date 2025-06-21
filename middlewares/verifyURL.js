@@ -10,9 +10,9 @@ function verifyURL(req, res, next){
         const safeUrl = sanitizeUrl(url)
 
         if(safeUrl.startsWith('javascript:'))throw new Error('INVALID_ITEM/DATA')
-
+    
         const dangerousChar = /[<>"'`´]/
-        if(!dangerousChar.test(url))throw new Error('INVALID_ITEM/DATA')
+        if(dangerousChar.test(url))throw new Error('INVALID_ITEM/DATA')
 
         const isValid = validator.isURL(safeUrl, {
             protocols: ['http', 'https'],

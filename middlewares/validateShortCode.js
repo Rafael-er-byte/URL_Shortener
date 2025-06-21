@@ -5,7 +5,7 @@ const valiadateShortCode = async function(req, res, next){
         const {shortCode} = req.body
 
         if(!shortCode || typeof shortCode !== 'string')return res.status(422).json({message:'INVALID SHORTCODE'}).end()
-        if(shortCode.length >= 13)return res.status(422).json({message:'TOO LARGE SHORTCODE'}).end()
+        if(shortCode.length >= 25)return res.status(422).json({message:'TOO LARGE SHORTCODE'}).end()
         if(shortCode.length <= 3)return res.status(422).json({message:'TOO SMALL SHORTCODE'}).end()
 
         function isCoherent(){

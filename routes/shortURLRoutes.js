@@ -9,6 +9,7 @@ const {
     updateURLController, 
     retrieveURLController, 
     updateNameURLController,
+    getStatsController,
     redirectController
 } = require('../controllers/shortURLController')
 
@@ -23,6 +24,8 @@ router.put('/uptcode', verifyShortCode, updateNameURLController)
 router.get('/retrieve/:shortcode', retrieveURLController)
 
 router.get('/:shortcode', redirectController)
+
+router.get('/stats/:shortCode', getStatsController)
 
 module.exports = router
 

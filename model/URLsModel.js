@@ -54,7 +54,7 @@ const modifyStatus = async function (shortCode, newStatus) {
 
 const updateAccess = async function (shortCode, newTime, lastVisit, stats) {
     const sql = 'UPDATE link SET expires_at = ?, last_visit = ?, stats = ? WHERE shorted_link = ?'
-    const [result] = await db.execute(sql, [newTime, lastVisit, shortCode, stats])
+    const [result] = await db.execute(sql, [newTime, lastVisit, stats, shortCode])
     return result
 }
 
