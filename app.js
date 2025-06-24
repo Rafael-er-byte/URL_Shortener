@@ -7,6 +7,8 @@ const urlRouter = require('./routes/shortURLRoutes')
 const erroHandler = require('./middlewares/errorMiddleware')
 const path = require('path')
 const setHeader = require('./middlewares/setHeader')
+const redisConnection = require('./config/redisConfig')
+const redis = redisConnection()
 
 app.use(setHeader)
 
