@@ -76,3 +76,14 @@ This is a simple backend service that allows users to shorten URLs. This repo se
         ```
         #### Example 
         ![create short url](./assets/createShortURL.png)
+
+   2. *GET /sh.io/retrieve/:shortCode*
+      Retrieve a original URL from its shortcode
+         #### Response
+         ```
+            {
+               original_URL: "URL"
+            }
+         ```
+         #### Example
+         ![retrieve short url](./assets/retrieveOriginalURL.png)
