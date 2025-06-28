@@ -25,8 +25,8 @@ This is a simple backend service that allows users to shorten URLs. This repo se
 ## Installation
    1. Clon this repo
       ```bash
-      git clone https://github.com/your-username/url-shortener.git
-      cd url-shortener
+      git clone https://github.com/Rafael-er-byte/URL_Shortener.git
+      cd URL_Shortener
       ```
    2. Install depedencies
       ```npm
