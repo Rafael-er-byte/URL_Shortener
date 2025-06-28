@@ -15,7 +15,7 @@ const {
 
 router.post('/', verifyUrl, verifyShortCode, createLinkControler)
 
-router.post('/del/:shortcode', delURLController)
+router.delete('/:shortcode', delURLController)
 
 router.put('/upturl', verifyUrl, verifyShortCode, updateURLController)
 

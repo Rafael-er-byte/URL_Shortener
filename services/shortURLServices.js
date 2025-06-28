@@ -122,7 +122,7 @@ const redirectService = async function (shortCode) {
         const expires_at = expirationDate()
         const lastVisit = dateNow()
 
-        const isUpdated = await updateAccess(shortCode, expires_at, lastVisit, result[0].stats)
+        const isUpdated = await updateAccess(shortCode, expires_at, lastVisit, result[0].stats + 1)
         if(isUpdated.affectedRows === 0)throw new Error('SOMETHING_WENT_WRONG')
 
         return [result[0].id, result[0].original_link]

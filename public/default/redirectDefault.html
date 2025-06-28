@@ -6,8 +6,8 @@
     <title>Redirect</title>
 </head>
 <body>
-    <h2>Redirigiendo a <span id="target"></span>...</h2>
-    <h3> Si no hiciste click cierra esta ventana</h3>
+    <h2>Redirecting to <span id="target"></span>...</h2>
+    <h3> If you don't do click, close this window </h3>
     <script>
         const urlParams = new URLSearchParams(window.location.search)
         const target = urlParams.get('to')
@@ -18,7 +18,7 @@
                 window.location.href = target
             }, 300);
         }else{
-            document.body.innerHTML = '<h2>URL no Valida...</h2>'
+            document.body.innerHTML = '<h2>Invalid URL...</h2>'
         }
     </script>
 </body>

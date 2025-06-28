@@ -49,6 +49,8 @@ const updateNameURLController = async function (req, res, next) {
     try{
         const {shortCode = null, newShortCode = null} = req.body
 
+        console.log(shortCode)
+
         if(!shortCode || !newShortCode)throw new Error('NOT_ITEM_PROVIDED')
 
         const newRoute = await updateNameURLService(shortCode, newShortCode)
