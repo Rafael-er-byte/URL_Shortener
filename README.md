@@ -52,7 +52,7 @@ This is a simple backend service that allows users to shorten URLs. This repo se
          ```
 ---
 
-## End points
+## Endpoints
   1. *POST /sh.io/*
     Create a link with a custom short code or dont.
      ### Request
