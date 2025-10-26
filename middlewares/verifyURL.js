@@ -13,14 +13,6 @@ function verifyURL(req, res, next){
     
         const dangerousChar = /[<>"'`´]/
         if(dangerousChar.test(url))throw new Error('INVALID_ITEM/DATA')
-
-        const isValid = validator.isURL(safeUrl, {
-            protocols: ['http', 'https'],
-            require_protocol: true,
-            host_whitelist: false
-        })
-
-        if(!isValid)throw new Error('INVALID_ITEM/DATA')
          
         const verify = new URL(safeUrl)
 
