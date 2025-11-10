@@ -1,4 +1,3 @@
-const validator = require('validator')
 const {sanitizeUrl} = require('@braintree/sanitize-url')
 
 function verifyURL(req, res, next){

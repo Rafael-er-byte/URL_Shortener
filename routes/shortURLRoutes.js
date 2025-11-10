@@ -28,4 +28,3 @@ router.get('/:shortcode', redirectController)
 router.get('/stats/:shortCode', getStatsController)
 
 module.exports = router
-
